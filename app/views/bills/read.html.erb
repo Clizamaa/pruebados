@@ -1,0 +1,32 @@
+
+<% @bills.each do |bills| %>
+
+    <section class="text-center">
+        <div class="container">
+            <h3 class="jumbotron-heading"><%= bills.title %></h3>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-5" align="left">
+
+                    <strong>Precio:</strong>
+                    <%= bills.price %>
+
+                    <br><br>
+
+                    <strong>Creado:</strong>
+                    <%= bills.created_at.strftime("%d/%m/%Y") %>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<% end %>
+
